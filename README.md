@@ -72,4 +72,4 @@ La aplicación está construida con **Laravel** como framework backend, utilizan
 
 
 
-![Modelo a utilizar](./images/modelo)
+![Modelo a utilizar](./images/modelo.jpg)
