@@ -33,7 +33,7 @@ La aplicación está construida con **Laravel** como framework backend, utilizan
 
 ## **Tecnologías Utilizadas**
 ### **Backend**
-- **Laravel 10**: Framework principal para la lógica del negocio y gestión de datos.
+- **Laravel 11.x**: Framework principal para la lógica del negocio y gestión de datos.
 - **PHP 8.2**: Lenguaje de programación backend.
 - **PostgreSQL**: Base de datos relacional.
 - **Redis** (opcional): Para caché y colas de procesamiento.
@@ -72,8 +72,3 @@ La aplicación está construida con **Laravel** como framework backend, utilizan
 
 ---
 
-## **Instalación**
-1. Clona este repositorio:
-   ```bash
-   git clone <url-del-repositorio>
-   cd gestor-de-contraseñas
