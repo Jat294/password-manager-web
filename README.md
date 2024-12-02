@@ -71,4 +71,4 @@ La aplicación está construida con **Laravel** como framework backend, utilizan
 - **Laravel Sail** (opcional): Para un entorno de desarrollo basado en Docker.
 
 ---
-
+![Modelo a utilizar](./images/gestor de contraseñas 2.jpg)
