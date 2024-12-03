@@ -34,9 +34,15 @@ class UserController extends Controller
             'name' => 'required',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|min:8',
+            'auth_method' => 'required', // Validar el campo auth_method
         ]);
 
-        User::create($request->all());
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+            'auth_method' => $request->auth_method, // Proporcionar el valor de auth_method
+        ]);
 
         return redirect()->route('users.index');
     }
