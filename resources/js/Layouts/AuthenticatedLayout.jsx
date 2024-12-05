@@ -23,7 +23,9 @@ export default function AuthenticatedLayout({ auth, header, children }) {
                     </div>
                     <div>
                         {auth && auth.user ? (
-                            <span className="text-gray-900">Hello, {auth.user.name}</span>
+                            <Link href="/profile" className="text-gray-900">
+                                Hello, {auth.user.name}
+                            </Link>
                         ) : (
                             <Link href="/login" className="text-gray-900">
                                 Login
