@@ -5,9 +5,12 @@ const Show = ({ account }) => {
     if (!account) {
         return <div>Loading...</div>;
     }
+
     const handleCopyPassword = () => {
         navigator.clipboard.writeText(account.encrypted_password).then(() => {
             alert('Password copied to clipboard');
+        }).catch(err => {
+            alert('Failed to copy password');
         });
     };
 
@@ -19,7 +22,7 @@ const Show = ({ account }) => {
                 <div className="bg-white rounded-lg shadow-md p-6">
                     <h2 className="text-2xl font-semibold text-gray-800 mb-2">{account.name}</h2>
                     <p className="text-gray-600">Username: {account.username}</p>
-                    <p className="text-gray-600">Category: {account.category.name}</p>
+                    <p className="text-gray-600">Category: {account.category ? account.category.name : 'No category'}</p>
                     <p className="text-gray-600">Password: {account.encrypted_password}</p>
                     <button
                         onClick={handleCopyPassword}
