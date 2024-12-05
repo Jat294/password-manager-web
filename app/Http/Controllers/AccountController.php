@@ -54,6 +54,7 @@ class AccountController extends Controller
     public function show(Account $account)
     {
         $account->encrypted_password = $this->decryptPassword($account->encrypted_password);
+        $account->load('category'); // Asegúrate de cargar la relación de categoría
         return Inertia::render('Accounts/Show', ['account' => $account]);
     }
 
